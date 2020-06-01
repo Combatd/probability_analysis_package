@@ -18,7 +18,8 @@ class Pants:
 #        new_price (float): the new price of the shirt
 #    Returns:
 #        None
-
+    def change_price(self, new_price):
+        self.price = new_price
 ### TODO: write a discount method:
 #    Args:
 #        discount (float): a decimal value for the discount. 
@@ -26,3 +27,5 @@ class Pants:
 #
 #    Returns:
 #        float: the discounted price
+    def discount(self, discount):
+        return self.price * (1 - discount)
