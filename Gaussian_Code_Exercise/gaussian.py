@@ -33,9 +33,12 @@ class Gaussian():
         
         #TODO: Calculate the mean of the data set. Remember that the data set is stored in self.data
         # Change the value of the mean attribute to be the mean of the data set
-        # Return the mean of the data set           
-        pass
-                
+        # Return the mean of the data set
+        # 
+        # Mean (average) is the sum of all values in the list divided by the number of values           
+        average = 1.0 * sum(self.data) / len(self.data)
+        self.mean = average
+        return self.mean
 
 
     def calculate_stdev(self, sample=True):
