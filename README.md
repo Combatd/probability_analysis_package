@@ -32,4 +32,26 @@ Let's pick something from the real-world: a dog. A few characteristics could be 
 * OOP - a commonly used abbreviation for object-oriented programming
 * encapsulation - one of the fundamental ideas behind object-oriented programming is called encapsulation: you can combine functions and data all into a single entity. In object-oriented programming, this single entity is called a class. Encapsulation allows you to hide implementation details much like how the scikit-learn package hides the implementation of machine learning algorithms.
 
+## OOP Syntax
+A function and a method look very similar. They both use the def keyword. They also have inputs and return outputs. The difference is that a method is inside of a class whereas a function is outside of a class.
+
+### What is self?
+If you instantiate two objects, how does Python differentiate between these two objects?
+```
+shirt_one = Shirt('red', 'S', 'short-sleeve', 15)
+short_two = Shirt('yellow', 'M', 'long-sleeve', 20)
+```
+That's where ```self``` comes into play. If you call the change_price method on shirt_one, how does Python know to change the price of shirt_one and not of shirt_two?
+
+```shirt_one.change_price(12)```
+Behind the scenes, Python is calling the change_price method:
+```
+    def change_price(self, new_price):
+
+        self.price = new_price
+```
+Self tells Python where to look in the computer's memory for the shirt_one object. And then Python changes the price of the shirt_one object. When you call the ```change_price```` method, ```shirt_one.change_price(12)```, ```self``` is implicitly passed in.
+
+The word ```self``` is just a convention. You could actually use any other name as long as you are consistent; however, you should always use ```self``` rather than some other word or else you might confuse people.
+
  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Please refer to [Udacity Terms of Service](https://www.udacity.com/legal) for further information.
