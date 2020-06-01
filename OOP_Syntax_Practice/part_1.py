@@ -13,3 +13,11 @@ class Shirt:
     def discount(self, discount):
 
         return self.price * (1 - discount)
+
+shirt_one = Shirt('red', 'S', 'long-sleeve', 25)
+print (shirt_one.price)
+shirt_one.change_price(10)
+print (shirt_one.price)
+print(shirt_one.discount(.12))
+shirt_two = Shirt('orange', 'L', 'short-sleeve', 10)
+total = shirt_one.price + shirt_two.price
