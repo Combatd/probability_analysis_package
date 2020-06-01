@@ -72,6 +72,8 @@ class SalesPerson:
 #        pants (Pants object): a pants object
 #    Returns:
 #        None
+    def sell_pants(self, pants_object):
+        self.pants_sold.append(pants_object)
 
 ### TODO: write a display_sales method:
 #    
@@ -83,10 +85,13 @@ class SalesPerson:
 #   color: blue, waist_size: 34, length: 34, price: 10
 #   color: red, waist_size: 36, length: 30, price: 14.15
 #
-#
+#   The format() method formats the specified value(s) and insert them inside the string's placeholder.
 #
 ###
-
+    def display_sales(self):
+        for pants in self.pants_sold:
+            print("color: {}, waist_size: {}, length: {}, price: {}"\
+                .format(pants.color, pants.waist_size, pants.length, pants.price))
 ### TODO: write a calculate_sales method:
 #      This method calculates the total sales for the sales person.
 #      The method should iterate through the pants_sold attribute list
@@ -99,8 +104,13 @@ class SalesPerson:
 #        float: total sales
 #
 ###  
-
-
+    def calculate_sales(self):
+        sum = 0
+        for pants in self.pants_sold:
+            sum += pants.price 
+        
+        self.total_sales = sum
+        return sum
 ### TODO: write a calculate_commission method:
 #
 #   The salesperson receives a commission based on the total
@@ -116,3 +126,6 @@ class SalesPerson:
 #
 #
 ###
+    def calculate_commission(self, percentage):
+        pants_sales = self.calculate_sales()
+        return pants_sales * percentage
