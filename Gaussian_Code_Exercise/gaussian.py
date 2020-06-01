@@ -61,9 +61,24 @@ class Gaussian():
         #   Keep the value of sample in mind for calculating the standard deviation
         #
         #   Make sure to update self.stdev and return the standard deviation as well    
-            
-        pass
         
+        #  Dividing by n − 1 rather than by n gives an unbiased estimate of the variance of the larger parent population.
+        if sample:
+            n = len(self.data) - 1
+        else:
+            n = len(self.data)
+
+        #  We need ot find the average of all the data points
+        average = self.mean
+        
+        # We take deviations of each data point fron the
+        # average, and then square the result.
+        # (data_point - mean)^2
+
+        # We get the variance calculating the mean of those values
+
+        # We square root the variance to get our standard deviation
+
 
     def read_data_file(self, file_name, sample=True):
     
