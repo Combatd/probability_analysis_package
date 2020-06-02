@@ -70,15 +70,18 @@ class Gaussian():
 
         #  We need ot find the average of all the data points
         average = self.mean
-        
+        # sigma represents deviation
+        sigma = 0
         # We take deviations of each data point fron the
         # average, and then square the result.
         # (data_point - mean)^2
-
+            for deviation in self.data:
+                sigma += (deviation - average) ** 2
         # We get the variance calculating the mean of those values
-
+            sigma = math.sqrt(sigma / n)
         # We square root the variance to get our standard deviation
-
+        self.stdev = sigma
+        return self.stdev
 
     def read_data_file(self, file_name, sample=True):
     
