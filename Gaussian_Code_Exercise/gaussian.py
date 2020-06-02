@@ -108,11 +108,13 @@ class Gaussian():
     
         # TODO: 
         #   Update the self.data attribute with the data_list
-        #   Update self.mean with the mean of the data_list. 
+        self.data = data_list
+        #   Update self.mean with the mean of the data_list.
+        self.mean = self.calculate_mean() 
         #       You can use the calculate_mean() method with self.calculate_mean()
         #   Update self.stdev with the standard deviation of the data_list. Use the 
-        #       calcaulte_stdev() method.
-                
+        #       calculate_stdev() method.
+        self.stdev = self.calculate_stdev(sample) 
         
     def plot_histogram(self):
         """Method to output a histogram of the instance variable data using 
