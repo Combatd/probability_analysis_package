@@ -52,6 +52,6 @@ Behind the scenes, Python is calling the change_price method:
 ```
 Self tells Python where to look in the computer's memory for the shirt_one object. And then Python changes the price of the shirt_one object. When you call the ```change_price```` method, ```shirt_one.change_price(12)```, ```self``` is implicitly passed in.
 
-The word ```self``` is just a convention. You could actually use any other name as long as you are consistent; however, you should always use ```self``` rather than some other word or else you might confuse people.
+The word ```self``` is just a convention. You could actually use any other name as long as you are consistent; however, you should always use ```self``` rather than some other word or else you might confuse people. Other languages, like Javascript, might use the word ```this```
 
  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Please refer to [Udacity Terms of Service](https://www.udacity.com/legal) for further information.
