@@ -34,7 +34,9 @@ class Gaussian():
         #TODO: Calculate the mean of the data set. Remember that the data set is stored in self.data
         # Change the value of the mean attribute to be the mean of the data set
         # Return the mean of the data set           
-        pass
+        average = 1.0 * sum(self.data) / len(self.data)
+        self.mean = average
+        return self.mean
                 
 
 
