@@ -61,7 +61,23 @@ class Gaussian():
         #
         #   Make sure to update self.stdev and return the standard deviation as well    
             
-        pass
+        if sample:
+            n = len(self.data) - 1
+        else:
+            n = len(self.data)
+        
+        mean = self.mean
+
+        sigma = 0
+
+        for deviation in self.data:
+            sigma += ( deviation - mean) ** 2
+
+            sigma = math.sqrt(sigma / n)
+        
+        self.stdev = sigma
+
+        return self.stdev
         
 
     def read_data_file(self, file_name, sample=True):
