@@ -126,7 +126,10 @@ class Gaussian():
         
         # TODO: Plot a histogram of the data_list using the matplotlib package.
         #       Be sure to label the x and y axes and also give the chart a title
-        
+        plt.hist(self.data)
+        plt.title("Magic Methods Histogram")
+        plt.xlabel("Data")
+        plt.set_ylabel("Counts")
                 
         
     def pdf(self, x):
