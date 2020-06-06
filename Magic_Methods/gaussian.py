@@ -218,8 +218,8 @@ class Gaussian():
         result = Gaussian()
         
         # TODO: calculate the mean and standard deviation of the sum of two Gaussians
-        result.mean = 5 # change this line to calculate the mean of the sum of two Gaussian distributions
-        result.stdev = 2 # change this line to calculate the standard deviation of the sum of two Gaussian distributions
+        result.mean = self.calculate_mean() + other.calculate_mean() # change this line to calculate the mean of the sum of two Gaussian distributions
+        result.stdev = self.calculate_stdev() + other.calculate_stdev() # change this line to calculate the standard deviation of the sum of two Gaussian distributions
         
         return result
 
