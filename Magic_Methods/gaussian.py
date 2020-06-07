@@ -242,4 +242,4 @@ class Gaussian():
         # the Gaussian.
         # For example "mean 3.5, standard deviation 1.3"
         
-       return "mean {}, standard deviation {}".format(self.mean, self.stdev)
+        return "mean {}, standard deviation {}".format(self.mean, self.stdev)
