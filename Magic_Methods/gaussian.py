@@ -73,7 +73,7 @@ class Gaussian():
         for deviation in self.data:
             sigma += ( deviation - mean) ** 2
 
-            sigma = math.sqrt(sigma / n)
+        sigma = math.sqrt(sigma / n)
         
         self.stdev = sigma
 
@@ -218,8 +218,9 @@ class Gaussian():
         result = Gaussian()
         
         # TODO: calculate the mean and standard deviation of the sum of two Gaussians
-        result.mean = self.calculate_mean() + other.calculate_mean() # change this line to calculate the mean of the sum of two Gaussian distributions
-        result.stdev = self.calculate_stdev() + other.calculate_stdev() # change this line to calculate the standard deviation of the sum of two Gaussian distributions
+        result = Gaussian()
+        result.mean = self.mean + other.mean
+        result.stdev = math.sqrt(self.stdev ** 2 + other.stdev ** 2)
         
         return result
 
