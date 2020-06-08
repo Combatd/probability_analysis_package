@@ -11,6 +11,9 @@ class Clothing:
         
     def calculate_discount(self, discount):
         return self.price * (1 - discount)
+
+    def calculate_shipping(self, weight, rate):
+        return weight * rate
         
 class Shirt(Clothing):
     
