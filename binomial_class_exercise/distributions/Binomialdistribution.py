@@ -64,8 +64,8 @@ class Binomial(Distribution):
         
         # TODO: calculate the mean of the Binomial distribution. Store the mean
         #       via the self variable and also return the new mean value
-                
-        pass 
+        # mean = probability * size        
+        self.mean = self.p * self.n 
 
 
 
