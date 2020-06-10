@@ -84,7 +84,10 @@ class Binomial(Distribution):
         # TODO: calculate the standard deviation of the Binomial distribution. Store
         #       the result in the self standard deviation attribute. Return the value
         #       of the standard deviation.
-        pass
+        
+        self.stdev = math.sqrt(self.n * self.p * (1 - self.p))
+
+        return self.stdev
         
         
         
