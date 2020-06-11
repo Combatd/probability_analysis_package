@@ -150,7 +150,10 @@ class Binomial(Distribution):
         #       1 on the x-axis and 20 on the y-axis
         
         #       Make sure to label the chart with a title, x-axis label and y-axis label
-        pass        
+        plt.bar(x = ['0', '1'], height = [(1 - self.p) * self.n, self.p * self.n])
+        plt.title('Data Bar Chart')
+        plt.xlabel('outcome')
+        plt.ylabel('count')   
         
     def pdf(self, k):
         """Probability density function calculator for the gaussian distribution.
