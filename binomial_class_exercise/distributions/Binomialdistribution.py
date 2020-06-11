@@ -67,7 +67,7 @@ class Binomial(Distribution):
         # mean = probability * size        
         self.mean = self.p * self.n 
 
-
+        return self.mean
 
     def calculate_stdev(self):
 
