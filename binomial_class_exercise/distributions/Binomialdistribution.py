@@ -121,7 +121,12 @@ class Binomial(Distribution):
         #
         #       Hint: You can use the calculate_mean() and calculate_stdev() methods
         #           defined previously.
-        pass
+        self.n = len(self.data)
+        self.p = 1.0 * sum(self.data) / len(self.data)
+        self.mean = self.calculate_mean()
+        self.stdev = self.calculate_stdev()
+        
+        return self.p, self.n
         
     def plot_bar(self):
         """Function to output a histogram of the instance variable data using 
