@@ -202,7 +202,11 @@ class Binomial(Distribution):
 
         #   This method should also return the x and y values used to make the chart
         #   The x and y values should be stored in separate lists
-                
+        plt.bar(x = ['0', '1'], height = [(1 - self.p) * self.n, self.p * self.n])
+        plt.title('Data Bar Chart')
+        plt.xlabel('outcome')
+        plt.ylabel('count')
+
     def __add__(self, other):
         
         """Function to add together two Binomial distributions with equal p
