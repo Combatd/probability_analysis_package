@@ -230,16 +230,21 @@ class Binomial(Distribution):
         # so you are only expected to implement the case for two distributions with equal p.
         
         # the try, except statement above will raise an exception if the p values are not equal
-        
+        try:
+            assert self.p == other.p, "p values not equal"
+        except AssertionError as error:
+            raise
         # Hint: You need to instantiate a new binomial object with the correct n, p, 
         #   mean and standard deviation values. The __add__ method should return this
         #   new binomial object.
-        
+        result = Binomial()
         #   When adding two binomial distributions, the p value remains the same
+        result.n = self.n + other.n
         #   The new n value is the sum of the n values of the two distributions.
-                
-        pass
+        result.p = self.p        
         
+        result.calculate_mean()
+        result.calculate_stdev()
         
     def __repr__(self):
     
