@@ -246,6 +246,8 @@ class Binomial(Distribution):
         result.calculate_mean()
         result.calculate_stdev()
         
+        return result
+
     def __repr__(self):
     
         """Function to output the characteristics of the Binomial instance
