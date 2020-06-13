@@ -264,4 +264,5 @@ class Binomial(Distribution):
         #       with the values replaced by whatever the actual distributions values are
         #       The method should return a string in the expected format
     
-        pass
+        return "mean {}, standard deviation {}, probability {}, size n {}".\
+        format(self.mean, self.stdev, self.p, self.n)
